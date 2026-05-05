@@ -2,40 +2,89 @@
 <html lang="ru"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Катерина Логунцова — сайт</title>
+  <title>Катерина Логунцова — психолог и телесный терапевт</title>
   <link rel="icon" href="assets/asset-ecb469c1-86f9-4776-b41c-97ee3afd8d4e.svg" type="image/svg+xml">
-  <script>
-  function __loadScript(src) {
-    return new Promise(function(resolve, reject) {
-      var s = document.createElement('script');
-      s.src = src;
-      s.onload = resolve;
-      s.onerror = reject;
-      document.head.appendChild(s);
-    });
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- SEO -->
+  <meta name="description" content="Катерина Логунцова — психолог и телесный терапевт в Москве. Индивидуальные консультации, телесная терапия, системные расстановки. 8 лет практики.">
+  <link rel="canonical" href="https://loguntsova.ru/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Катерина Логунцова — психолог и телесный терапевт">
+  <meta property="og:description" content="Индивидуальные консультации, телесная терапия, системные расстановки в Москве. Помогу найти опору и устойчивость.">
+  <meta property="og:url" content="https://loguntsova.ru/">
+  <meta property="og:image" content="https://loguntsova.ru/assets/asset-c80e177a-8219-404b-a3f6-f594f90926ce.png">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Катерина Логунцова">
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Катерина Логунцова — психолог и телесный терапевт">
+  <meta name="twitter:description" content="Индивидуальные консультации, телесная терапия, системные расстановки в Москве.">
+  <meta name="twitter:image" content="https://loguntsova.ru/assets/asset-c80e177a-8219-404b-a3f6-f594f90926ce.png">
+
+  <!-- Performance: parallel-prefetch all app chunks and content -->
+  <link rel="preload" href="/content.json" as="fetch" crossorigin>
+  <link rel="preload" href="assets/asset-574bf4c3-dc8a-4a8b-a904-0430e0693d8f.js" as="script">
+  <link rel="preload" href="assets/asset-35129c28-da94-4df6-a2e7-f383de60d973.js" as="script">
+  <link rel="preload" href="assets/compiled/app-01.js" as="script">
+  <link rel="preload" href="assets/compiled/app-02.js" as="script">
+  <link rel="preload" href="assets/compiled/app-03.js" as="script">
+  <link rel="preload" href="assets/compiled/app-04.js" as="script">
+  <link rel="preload" href="assets/compiled/app-05.js" as="script">
+  <link rel="preload" href="assets/compiled/app-06.js" as="script">
+  <link rel="preload" href="assets/compiled/app-07.js" as="script">
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Катерина Логунцова",
+    "jobTitle": "Психолог, телесный терапевт",
+    "url": "https://loguntsova.ru/",
+    "email": "hello@loguntsova.ru",
+    "image": "https://loguntsova.ru/assets/asset-c80e177a-8219-404b-a3f6-f594f90926ce.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Москва",
+      "addressCountry": "RU"
+    },
+    "sameAs": [
+      "https://t.me/katerina_loguntsova",
+      "https://www.instagram.com/loguntsova.practice"
+    ],
+    "knowsAbout": ["Психология", "Телесная терапия", "Системные расстановки по Хеллингеру"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Услуги психолога",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Индивидуальная консультация", "description": "60 минут, онлайн или очно" },
+          "price": "5000",
+          "priceCurrency": "RUB"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Телесная терапия", "description": "75 минут, только очно" },
+          "price": "6500",
+          "priceCurrency": "RUB"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Системные расстановки", "description": "2 часа, метод Берта Хеллингера" },
+          "price": "8000",
+          "priceCurrency": "RUB"
+        }
+      ]
+    }
   }
-  document.addEventListener('DOMContentLoaded', function() {
-    fetch('/content.json')
-      .then(function(r) { return r.json(); })
-      .then(function(content) {
-        window.__content = content;
-        window.__resources = content.photos;
-        return [
-          'assets/asset-574bf4c3-dc8a-4a8b-a904-0430e0693d8f.js',
-          'assets/asset-35129c28-da94-4df6-a2e7-f383de60d973.js',
-          'assets/compiled/app-01.js',
-          'assets/compiled/app-02.js',
-          'assets/compiled/app-03.js',
-          'assets/compiled/app-04.js',
-          'assets/compiled/app-05.js',
-          'assets/compiled/app-06.js',
-          'assets/compiled/app-07.js'
-        ].reduce(function(p, src) {
-          return p.then(function() { return __loadScript(src); });
-        }, Promise.resolve());
-      });
-  });
-</script>
+  </script>
+
+  <script src="assets/loader.js" defer></script>
 
   
   
@@ -1088,11 +1137,31 @@ a:hover { color: var(--olive-dark); }
     a { cursor: pointer; }
     .fade-in { animation: fadeIn 700ms cubic-bezier(0.16, 1, 0.3, 1) both; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
   </style>
 
   <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <h1 class="visually-hidden">Катерина Логунцова — психолог и телесный терапевт · Москва</h1>
+  <noscript>
+    <div style="padding:40px;font-family:sans-serif;max-width:800px;margin:0 auto;line-height:1.6">
+      <h1>Катерина Логунцова — психолог и телесный терапевт</h1>
+      <p>Индивидуальные консультации, телесная терапия и системные расстановки в Москве. 8 лет частной практики.</p>
+      <h2>Услуги</h2>
+      <ul>
+        <li>Консультация — 5 000 ₽ (60 мин, онлайн или очно)</li>
+        <li>Телесная терапия — 6 500 ₽ (75 мин, только очно)</li>
+        <li>Системные расстановки — 8 000 ₽ (2 часа)</li>
+      </ul>
+      <h2>Контакты</h2>
+      <p>Telegram: @katerina_loguntsova · Email: hello@loguntsova.ru · Москва, центр</p>
+    </div>
+  </noscript>
   <div id="app"></div>
 
 
