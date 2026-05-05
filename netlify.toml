@@ -17,7 +17,7 @@
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Cache-Control = "no-cache"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: blob: https:; font-src 'self' data: https://unpkg.com; connect-src 'self' https://*.netlify.com https://api.netlify.com https://git-gateway.netlify.com; frame-ancestors 'self'; object-src 'none';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/decap-cms@3.12.2/ https://identity.netlify.com; style-src 'self' 'unsafe-inline' https://unpkg.com/decap-cms@3.12.2/; img-src 'self' data: blob: https:; font-src 'self' data: https://unpkg.com/decap-cms@3.12.2/; connect-src 'self' https://*.netlify.com https://api.netlify.com https://git-gateway.netlify.com; frame-ancestors 'self'; object-src 'none';"
 
 [[headers]]
   for = "/content.json"
