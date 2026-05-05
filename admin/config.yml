@@ -1,0 +1,163 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+locale: ru
+
+collections:
+  - name: site
+    label: Сайт
+    files:
+
+      - name: photos
+        label: Фотографии
+        file: content.json
+        fields:
+          - label: Фотографии
+            name: photos
+            widget: object
+            fields:
+              - { label: "Фото (камень)", name: photoStone, widget: image }
+              - { label: "Фото (свет)", name: photoLight, widget: image }
+              - { label: "Фото (туман)", name: photoMist, widget: image }
+              - { label: "Фото (руки)", name: photoHands, widget: image }
+              - { label: "Фото (силуэт)", name: photoSilhouette, widget: image }
+              - { label: "Фото (ткань)", name: photoFabric, widget: image }
+              - { label: "Портрет", name: photoPortrait, widget: image }
+              - { label: "Пейзаж", name: photoLandscape, widget: image }
+
+      - name: nav
+        label: Навигация
+        file: content.json
+        fields:
+          - label: Навигация
+            name: nav
+            widget: object
+            fields:
+              - { label: "Имя в шапке", name: title, widget: string }
+              - { label: "Подпись", name: subtitle, widget: string }
+
+      - name: home
+        label: Главная страница
+        file: content.json
+        fields:
+          - label: Главная
+            name: home
+            widget: object
+            fields:
+              - { label: "Заголовок героя (с переносом через \\n)", name: hero_title, widget: string }
+              - { label: "Текст героя", name: hero_body, widget: text }
+              - { label: "Превью услуг", name: services_preview, widget: list, fields: [
+                  { label: "Номер", name: n, widget: string },
+                  { label: "Заголовок", name: title, widget: string },
+                  { label: "Тег", name: sub, widget: string },
+                  { label: "Ключ фото", name: photoKey, widget: string },
+                  { label: "Описание", name: body, widget: text }
+                ]}
+              - { label: "Превью продуктов", name: products_preview, widget: list, fields: [
+                  { label: "Название", name: title, widget: string },
+                  { label: "Тип", name: kind, widget: string },
+                  { label: "Цена была", name: was, widget: string },
+                  { label: "Цена сейчас", name: now, widget: string },
+                  { label: "Скидка %", name: off, widget: number },
+                  { label: "Ключ фото", name: photoKey, widget: string }
+                ]}
+
+      - name: reviews
+        label: Отзывы
+        file: content.json
+        fields:
+          - label: Отзывы
+            name: reviews
+            widget: list
+            fields:
+              - { label: "Текст", name: text, widget: text }
+              - { label: "Имя", name: name, widget: string }
+              - { label: "Тег", name: tag, widget: string }
+
+      - name: faq
+        label: FAQ
+        file: content.json
+        fields:
+          - label: FAQ
+            name: faq
+            widget: list
+            fields:
+              - { label: "Вопрос", name: question, widget: string }
+              - { label: "Ответ", name: answer, widget: text }
+
+      - name: about
+        label: Обо мне
+        file: content.json
+        fields:
+          - label: Обо мне
+            name: about
+            widget: object
+            fields:
+              - { label: "Подзаголовок", name: subtitle, widget: string }
+              - { label: "Биография (абзац 1)", name: bio_1, widget: text }
+              - { label: "Биография (абзац 2)", name: bio_2, widget: text }
+              - { label: "Образование", name: education, widget: list, fields: [
+                  { label: "Год", name: "0", widget: string },
+                  { label: "Описание", name: "1", widget: string }
+                ]}
+              - { label: "Темы работы", name: topics, widget: list, field: { label: "Тема", name: item, widget: string }}
+
+      - name: services
+        label: Услуги
+        file: content.json
+        fields:
+          - label: Услуги
+            name: services
+            widget: list
+            fields:
+              - { label: "Номер", name: n, widget: string }
+              - { label: "Тег", name: tag, widget: string }
+              - { label: "Заголовок", name: title, widget: string }
+              - { label: "Ключ фото", name: photoKey, widget: string }
+              - { label: "Описание", name: body, widget: text }
+              - { label: "Формат", name: format, widget: list, field: { label: "Строка", name: item, widget: string }}
+              - { label: "Цена", name: price, widget: string }
+
+      - name: shop
+        label: Продукты/Магазин
+        file: content.json
+        fields:
+          - label: Магазин
+            name: shop
+            widget: object
+            fields:
+              - { label: "Заголовок", name: title, widget: string }
+              - { label: "Подзаголовок", name: subtitle, widget: text }
+              - { label: "Заголовок «Скоро»", name: coming_soon_title, widget: string }
+              - { label: "Текст «Скоро»", name: coming_soon_body, widget: text }
+              - label: Продукты
+                name: products
+                widget: list
+                fields:
+                  - { label: "Название", name: title, widget: string }
+                  - { label: "Тип", name: kind, widget: string }
+                  - { label: "Категория", name: cat, widget: select, options: ["медитации", "гайды", "практики"] }
+                  - { label: "Цена была", name: was, widget: string }
+                  - { label: "Цена сейчас", name: now, widget: string }
+                  - { label: "Скидка %", name: off, widget: number }
+                  - { label: "Ключ фото", name: photoKey, widget: string }
+
+      - name: contact
+        label: Контакты
+        file: content.json
+        fields:
+          - label: Контакты
+            name: contact
+            widget: object
+            fields:
+              - { label: "Подзаголовок", name: subtitle, widget: string }
+              - { label: "Заголовок каналов", name: channels_title, widget: string }
+              - { label: "Каналы", name: channels, widget: list, fields: [
+                  { label: "Название", name: "0", widget: string },
+                  { label: "Значение", name: "1", widget: string }
+                ]}
+              - { label: "Сообщение после отправки", name: success_body, widget: text }
